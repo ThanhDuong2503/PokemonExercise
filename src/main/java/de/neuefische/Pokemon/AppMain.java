@@ -2,6 +2,7 @@ package de.neuefische.Pokemon;
 
 import de.neuefische.Pokemon.model.Glumanda;
 import de.neuefische.Pokemon.model.Pikachu;
+import de.neuefische.Pokemon.model.Pokedex;
 
 import java.util.ArrayList;
 
@@ -61,6 +62,16 @@ public class AppMain {
         glumandalist.add(new Glumanda("Fire", "cyan"));
         glumandalist.add(new Glumanda("Fire", "magenta"));
         glumandalist.add(new Glumanda("Fire", "yellow"));
+
+        try {
+            Pokedex dex = new Pokedex();
+            dex.add(new Glumanda("Fire", "cyan"));
+            dex.add(new Pikachu("Electro", "yellow"));
+            dex.add(new Glumanda("Fire", "cyan"));
+        }
+            catch (RuntimeException e) {
+            System.out.print(e);
+        }
 
         System.out.print(glumandalist.get(1));
 

@@ -1,6 +1,10 @@
 package de.neuefische.Pokemon.model;
 
-public class Pokemon {
+public abstract class Pokemon {
+
+    public abstract void roar();
+
+
     public static void goInsidePokeball() {
         System.out.println("Pokemon is inside Pokeball");
     }
@@ -19,7 +23,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon: " +
+        return '\n' + "Pokemon: " +
                 "type: " + type +
                 ", colour: " + colour + '\n';
     }

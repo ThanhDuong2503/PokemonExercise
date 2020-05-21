@@ -1,8 +1,6 @@
 package de.neuefische.Pokemon;
 
-import de.neuefische.Pokemon.model.Glumanda;
-import de.neuefische.Pokemon.model.Pikachu;
-import de.neuefische.Pokemon.model.Pokedex;
+import de.neuefische.Pokemon.model.*;
 
 import java.util.ArrayList;
 
@@ -26,6 +24,7 @@ public class AppMain {
         glu.roar();
 
         System.out.print('\n'+"---------------------------------------"+'\n');
+
 
         //ArrayList <String> pokemonList = new ArrayList<String>();
         //pokemonList.add("Pikachu");
@@ -52,31 +51,39 @@ public class AppMain {
 
         pikachulist.remove(new Pikachu("Electro", "white"));
 
-        System.out.print(pikachulist.get(2));
+        System.out.println(pikachulist.get(2));
 
         for(int i=0; i<pikachulist.size();i++){
-            System.out.print(pikachulist.get(i));
+            System.out.println(pikachulist.get(i));
         }
+
+        System.out.print('\n'+"---------------------------------------"+'\n');
 
         ArrayList<Glumanda> glumandalist = new ArrayList<Glumanda>();
         glumandalist.add(new Glumanda("Fire", "cyan"));
         glumandalist.add(new Glumanda("Fire", "magenta"));
         glumandalist.add(new Glumanda("Fire", "yellow"));
 
+        for (Glumanda glumanda : glumandalist){
+            System.out.println(glumanda);
+        }
+
         try {
             Pokedex dex = new Pokedex();
             dex.add(new Glumanda("Fire", "cyan"));
             dex.add(new Pikachu("Electro", "yellow"));
-            dex.add(new Glumanda("Fire", "cyan"));
+            dex.add(new Glumanda("Fire", "purple"));
+
+            dex.printlist();
         }
             catch (RuntimeException e) {
             System.out.print(e);
         }
+        System.out.print('\n'+"---------------------------------------"+'\n');
 
-        System.out.print(glumandalist.get(1));
-
-        for (Glumanda glumanda : glumandalist){
-            System.out.print(glumanda);
-        }
+        Glurak glurak = new Glurak("Fire", "orange");
+        System.out.print(glurak);
+        glurak.roar();
+        glurak.superFireAttack();
     }
 }

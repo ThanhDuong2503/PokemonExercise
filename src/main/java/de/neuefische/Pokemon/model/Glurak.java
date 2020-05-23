@@ -7,7 +7,7 @@ public class Glurak extends Glumanda{
 
     @Override
     public void roar() {
-        System.out.print("Gluraaaaaak");
+        System.out.println("Gluraaaaaak");
     }
     public static void superFireAttack(){
         System.out.print("use Fireblast");

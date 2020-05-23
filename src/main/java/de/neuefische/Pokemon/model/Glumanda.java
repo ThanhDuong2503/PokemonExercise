@@ -4,7 +4,7 @@ public class Glumanda extends Pokemon{
 
     @Override
     public void roar() {
-        System.out.print("Glumandaaaa");
+        System.out.println("Glumandaaaa");
     }
 
     public Glumanda(String type, String colour) {
@@ -14,4 +14,5 @@ public class Glumanda extends Pokemon{
     public static void FireAttack(){
         System.out.println("use FIRE");
     }
+
 }

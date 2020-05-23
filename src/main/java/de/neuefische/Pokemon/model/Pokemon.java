@@ -44,6 +44,7 @@ public abstract class Pokemon {
                 ", colour: " + colour + '\n';
     }
 
+
 }
 
 

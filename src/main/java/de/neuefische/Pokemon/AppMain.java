@@ -3,6 +3,7 @@ package de.neuefische.Pokemon;
 import de.neuefische.Pokemon.model.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class AppMain {
     public static void main(String[] args) {
@@ -10,20 +11,20 @@ public class AppMain {
         Pikachu pika = new Pikachu("Electro", "yellow" );
         Glumanda glu = new Glumanda("Fire", "red");
 
-        System.out.print(pika);
+        System.out.println(pika);
         pika.goInsidePokeball();
         pika.comeOutOfPokeball();
         pika.ThunderAttack();
         pika.roar();
 
 
-        System.out.print(glu);
+        System.out.println(glu);
         glu.goInsidePokeball();
         glu.comeOutOfPokeball();
         glu.FireAttack();
         glu.roar();
 
-        System.out.print('\n'+"---------------------------------------"+'\n');
+        System.out.println('\n'+"---------------------------------------"+'\n');
 
 
         //ArrayList <String> pokemonList = new ArrayList<String>();
@@ -57,7 +58,7 @@ public class AppMain {
             System.out.println(pikachulist.get(i));
         }
 
-        System.out.print('\n'+"---------------------------------------"+'\n');
+        System.out.println('\n'+"---------------------------------------"+'\n');
 
         ArrayList<Glumanda> glumandalist = new ArrayList<Glumanda>();
         glumandalist.add(new Glumanda("Fire", "cyan"));
@@ -72,17 +73,19 @@ public class AppMain {
             Pokedex dex = new Pokedex();
             dex.add(new Glumanda("Fire", "cyan"));
             dex.add(new Pikachu("Electro", "yellow"));
-            dex.add(new Glumanda("Fire", "purple"));
+            dex.add(new Glumanda("Fire", "cyan"));
 
             dex.printlist();
         }
             catch (RuntimeException e) {
             System.out.print(e);
         }
-        System.out.print('\n'+"---------------------------------------"+'\n');
+
+
+        System.out.println('\n'+"---------------------------------------"+'\n');
 
         Glurak glurak = new Glurak("Fire", "orange");
-        System.out.print(glurak);
+        System.out.println(glurak);
         glurak.roar();
         glurak.superFireAttack();
     }

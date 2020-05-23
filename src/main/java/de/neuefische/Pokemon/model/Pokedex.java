@@ -14,8 +14,7 @@ public class Pokedex {
     }
 
     public void printlist(){
-        System.out.print("Pokedex: "+ '\n'+ pokedexlist + '\n');
+        System.out.println("Pokedex: "+ '\n'+ pokedexlist + '\n');
     }
-
 
 }
